@@ -1,0 +1,57 @@
+#### This is licensed under the Creative Commons        ####
+#### Attribution-NonCommercial-ShareAlike 3.0 Unported  ####
+#### (CC BY-NC-SA 3.0) license.                         ####
+#### http://creativecommons.org/licenses/by-nc-sa/3.0/  ####
+#### Please cite the relevant work:                     ####
+#### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012. ####
+#### Questions/comments, send to m.mitchell@abdn.ac.uk  ####
+
+README for Midge generator.
+
+REQUIREMENTS:
+- Python 2.5 or later
+- NLTK and NLTK's version of WordNet
+- Python's yaml library for reading yaml files
+
+
+
+To use,
+python generate.py --data-file=Blah.yaml
+
+To hallucinate verbs, 
+python generate.py --data-file=Blah.yaml --hallucinate=verb
+
+
+### Options ###
+--data_file=path/to/vision_out  Reads in vision out in yaml format.
+--vision-objects=path/to/detected_objects       Reads in the objects the vision system is detecting (helps constrain search space).
+--word-thresh=X         Blanket probability threshold for word-coocurrence rules.
+--vision-thresh=X       Blanket score threshold for vision detections.
+--post-id=X         Prints out descriptions for a specific post-id (if available from read in output).
+--hallucinate=[verb|noun|adj]   'Hallucinates' open class things.  Currently just supports verbs.
+--count-cutoff=X        How many times something must be observed before considering it as an option.
+--with-preps            Input includes a preposition specification, and output will be constrained in accordance
+                (calculated from bounding box; true for BabyTalk input).
+--verb-forms=path/to/vision_verbs       Reads in mapping of vision detection verbs to their lexical forms.
+--not-pickled           Do not read in saved pickle files.
+
+
+### Yaml file format ###
+Computer vision output needs to be formatted in the way listed below.  Note that the only things REQUIRED are the id, label, score, and postid; everything else is optional.
+- id: 1
+  type: 1
+  label: girl
+  score: -0.674386
+  post_id: 2008_000335.txt
+  bbox: [98.0, 98.0, 242.0, 145.0]
+  attrs: {'blue': 0.028448, 'brown': 0.029408, 'colorful': 0.096156, 'gray': 0.010711, 'wooden': 0.045647, 'furry': 0.160361, 'clear': 0.033369, 'golden': 0.506392, 'yellow': 0.038993, 'rectangular': 0.025997, 'rusty': 0.090902, 'pink': 0.008614, 'black': 0.039571, 'dirty': 0.268903, 'orange': 0.031291, 'green': 0.013342, 'white': 0.003223, 'feathered': 0.345758, 'shiny': 0.411671, 'striped': 0.030062, 'red': 0.014437}
+- id: 2
+  type: 1
+  label: boy
+  score: 0.949139
+  post_id: 2008_000335.txt
+  bbox: [64.0, 38.0, 377.0, 147.0]
+  attrs: {'blue': 0.571586, 'brown': 0.018853, 'colorful': 0.061227, 'gray': 0.570315, 'wooden': 0.009729, 'furry': 0.000332, 'clear': 0.759303, 'golden': 0.073179, 'yellow': 0.006765, 'rectangular': 0.067174, 'rusty': 0.050299, 'pink': 0.002161, 'black': 0.012524, 'dirty': 0.027361, 'orange': 0.005298, 'green': 0.007537, 'white': 0.012733, 'feathered': 0.069583, 'shiny': 0.003181, 'striped': 0.002878, 'red': 0.00454}
+  preps: {'1,2': 'by'}
+
+Where 'id' is a unique identifier; 'type' is 1 for object or 2 for action/pose; 'label' is the detection label; 'score' is the vision score; 'post_id' is the image; 'bbox' is the bounding box of the detected object (xmin,ymin,width,height); 'attrs' are the attributes that fire within the bounding box, along with their score; and 'preps' is a basic computed spatial relation derived from the bounding boxes.

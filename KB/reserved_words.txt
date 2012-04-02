@@ -1,0 +1,1 @@
+airplane,bicycle,bird,boat,bottle,building,bus,car,cat,chair,cow,dog,flower,grass,horse,laptop,tv,motorcycle,person,plant,road,sheep,sky,sofa,table,tiger,train,tree,water,window,black,blue,brown,colorful,golden,gray,green,orange,pink,red,silver,white,yellow,bare,clear,cute,dirty,feathered,flying,furry,pine,plastic,rectangular,rusty,sail,shiny,spotted,striped,wooden

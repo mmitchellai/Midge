@@ -1,0 +1,8 @@
+stand:standing
+swim:swimming
+sit:sitting
+face:facing
+run:running
+fly:flying
+liedown:lying down
+standeat:standing and eating

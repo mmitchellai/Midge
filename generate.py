@@ -1,3 +1,12 @@
+#### This is licensed under the Creative Commons        ####
+#### Attribution-NonCommercial-ShareAlike 3.0 Unported  ####
+#### (CC BY-NC-SA 3.0) license.                         ####
+#### http://creativecommons.org/licenses/by-nc-sa/3.0/  ####
+#### Please cite the relevant work:                     ####
+#### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012. ####
+#### Questions/comments, send to m.mitchell@abdn.ac.uk  ####
+
+
 import sys
 import re
 import itertools
@@ -5,7 +14,6 @@ import yaml
 import pickle
 from copy import copy
 from queryKB import queryKB
-from nltk.corpus import wordnet as wn
 from math import log
 
 class Sofie():
@@ -17,6 +25,7 @@ class Sofie():
                     halluc_set:  Set of syntactic categories being 'hallucinated' from language modelling alone. 
                     with_preps:  if True, use basic spatial relations from vision bounding boxes to guide
                                 prep selection, otherwise guess preps from language modelling alone. """
+        self.DEBUG = False
         self.data = data
         self.animal = ""
         self.detections = {}
@@ -27,11 +36,9 @@ class Sofie():
         self.count_cutoff = count_cutoff
         self.vision_thresh = vision_thresh
         self.halluc_set = halluc_set
-        # Colors and actions the system is currently detecting, mapped to their progressive forms.
+        # Colors the system is currently detecting.
         # Small set, so hard-wired for now.  
         self.colors = ('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'black', 'white')
-        # Not utilized in system demo.
-        self.actions = {'stand':'standing', 'swim':'swimming', 'sit':'sitting', 'face':'facing', 'run':'running', 'fly':'flying', 'liedown':'lying down', 'standeat':'standing and eating'}
         # Stores all of the corpus-based probability estimates, and functions to grab them.
         self.KB_obj = KB_obj
         # Present tense verb forms.
@@ -304,7 +311,11 @@ class Sofie():
             #        continue
             # except KeyError:
             #    pass
-            type_n = a['type']
+            # If 'type' isn't specified, just assume an object detection.
+            try:
+                type_n = a['type']
+            except KeyError:
+                type_n = '1'
             id_n = a['id']
             post_id = a['post_id']
             # Generating for just a single image.
@@ -441,6 +452,9 @@ class Sofie():
         return det_hash
 
     def run(self):
+        if self.prep_detections == {}:
+            sys.stderr.write("Have not read in spatial relations from bounding boxes; generating prepositions from language model alone.\n")
+            self.with_preps = False
         final_sentence_hash = {}
         # For each image..
         for post_id in self.detections:
@@ -660,19 +674,25 @@ class Sofie():
                                 tag_prep_prob = (prep_node[0], prep_node[1], prob)
                                 obj_relations[s][id_tuple][("PP", tag_prep_prob)] = prob
                 # Generate sentences.
-                print "Generating with", NPs, obj_relations
+                if self.DEBUG:
+                    print "Generating with", NPs, obj_relations
                 final_sentence_hash[post_id] = self.generate_sentences(NPs, obj_relations)
-                print "*** final sentence is", final_sentence_hash[post_id]
+                if self.DEBUG:
+                    print "*** final sentence is", final_sentence_hash[post_id]
         return final_sentence_hash
 
 def print_usage():
-    sys.stderr.write("Usage:  python generate.py (data_file|--post-id=2008_XXXXXX.txt) [OPTIONS]\n")
+    sys.stderr.write("Usage:  python generate.py [OPTIONS]\n")
     sys.stderr.write("### Options ###\n")
-    sys.stderr.write("--word-thresh=X\t\t\tBlanket probability threshold for word-coocurrence/lpcfg rules.\n")
+    sys.stderr.write("--data_file=path/to/vision_out\tReads in vision out in yaml format.\n")
+    sys.stderr.write("--vision-objects=path/to/detected_objects\t\tReads in the objects the vision system is detecting (helps constrain search space).\n")    
+    sys.stderr.write("--word-thresh=X\t\t\tBlanket probability threshold for word-coocurrence rules.\n")
+    sys.stderr.write("--vision-thresh=X\t\tBlanket score threshold for vision detections.\n")
     sys.stderr.write("--post-id=X\t\t\tPrints out descriptions for a specific post-id (if available from read in output).\n")
     sys.stderr.write("--hallucinate=[verb|noun|adj]\t'Hallucinates' open class things.  Currently just supports verbs.\n")
     sys.stderr.write("--count-cutoff=X\t\tHow many times something must be observed before considering it as an option.\n")
     sys.stderr.write("--with-preps\t\t\tInput includes a preposition specification, and output will be constrained in accordance\n\t\t\t\t(calculated from bounding box; true for BabyTalk input).\n")
+    sys.stderr.write("--verb-forms=path/to/vision_verbs\t\tReads in mapping of vision detection verbs to their lexical forms.\n")
     sys.stderr.write("--not-pickled\t\t\tDo not read in saved pickle files.\n")
     sys.exit()
 
@@ -680,20 +700,24 @@ if __name__ == "__main__":
     word_thresh = .01
     count_cutoff = 2
     vision_thresh = .3
+    verb_forms = {}
     spec_post = False
     halluc_set = []
     with_preps = True
     pickled = True
-    if len(sys.argv) < 2:
-        print_usage()
-    check_arg_1 = sys.argv[1].split("=")
-    # Makes it possible to input a whole data file
-    # or 1 specific image.
-    if check_arg_1[0] == "--post-id":
-        spec_post = check_arg_1[1]
-    for arg in sys.argv[2:]:
+    data = None
+    objects = None
+    for arg in sys.argv[1:]:
         split_arg = arg.split("=")
-        if split_arg[0] == "--word-thresh":
+        if split_arg[0] == "--data-file":
+            data = yaml.load(file(split_arg[1], 'r'))
+            pickle.dump(data, open("pickled_files/data.pk", "wb"))
+        elif split_arg[0] == "--vision-objects":
+            objects_file = open(split_arg[1], "r")
+            objects = objects_file.readline().strip().split(",")
+            objects_file.close()
+            pickle.dump(objects, open("pickled_files/objects.pk", "wb"))
+        elif split_arg[0] == "--word-thresh":
             word_thresh = float(split_arg[1])
         elif split_arg[0] == "--post-id":
             spec_post = split_arg[1]
@@ -710,25 +734,22 @@ if __name__ == "__main__":
             pickled = False
         elif split_arg[0] == "--vision-thresh":
             vision_thresh = float(split_arg[1])
+        elif split_arg[0] == "--verb-forms":
+            # Just passing on this for now (will add more when verbs consistently fire).
+            verb_forms = open(split_arg[1], "r")
         else:
             print_usage()
-    # Commented out stuff below is from
-    # different input approaches we've used...
-    #if not pickled:
-    #data = yaml.load(file(sys.argv[1], 'r'))
-    #pickle.dump(data, open("pickled_files/data.pk", "wb"))
-    ##else:
-    if len(check_arg_1) == 1:
+    if data == None:
+        if not pickled:
+            sys.stderr.write("Warning -- no input data.  Reading pickled data instead...\n")
         data = pickle.load(open("pickled_files/data.pk", "rb"))
-    else:
-        data = yaml.load(file("vision_out-dev/" + spec_post, 'r'))
-
+    if objects == None:
+        objects = pickle.load(open("pickled_files/objects.pk", "rb"))
     if not pickled:
-        KB_obj = queryKB(word_thresh, count_cutoff, False)
+        KB_obj = queryKB(objects, word_thresh, count_cutoff, False)
     else:
-        KB_obj = queryKB(word_thresh, count_cutoff)
+        KB_obj = queryKB(objects, word_thresh, count_cutoff)
     sofie_obj = Sofie(KB_obj, data, word_thresh, count_cutoff, vision_thresh, spec_post, halluc_set, with_preps, pickled)
-    #sofie_obj.get_detections()
     final_sentence_hash = sofie_obj.run()
     for post_id in sorted(final_sentence_hash):
         print "***", post_id
