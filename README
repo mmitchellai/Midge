@@ -1,5 +1,6 @@
 ### Copyright 2011, 2012 Margaret Mitchell
 ### Distributed under the terms of the GNU General Public License
+###
 ### This file is part of the vision-to-language system Midge.
 ### 
 ### Midge is free software: you can redistribute it and/or modify
@@ -35,6 +36,7 @@ python generate.py --data-file=Blah.yaml
 To hallucinate verbs, 
 python generate.py --data-file=Blah.yaml --hallucinate=verb
 
+This program currently generates sentences for the objects listed in KB/reserved_words.  More words will be added to this as detectors are trained for more objects.
 
 ### Options ###
 --data_file=path/to/vision_out  Reads in vision out in yaml format.
@@ -68,4 +70,15 @@ Computer vision output needs to be formatted in the way listed below.  Note that
   attrs: {'blue': 0.571586, 'brown': 0.018853, 'colorful': 0.061227, 'gray': 0.570315, 'wooden': 0.009729, 'furry': 0.000332, 'clear': 0.759303, 'golden': 0.073179, 'yellow': 0.006765, 'rectangular': 0.067174, 'rusty': 0.050299, 'pink': 0.002161, 'black': 0.012524, 'dirty': 0.027361, 'orange': 0.005298, 'green': 0.007537, 'white': 0.012733, 'feathered': 0.069583, 'shiny': 0.003181, 'striped': 0.002878, 'red': 0.00454}
   preps: {'1,2': 'by'}
 
-Where 'id' is a unique identifier; 'type' is 1 for object or 2 for action/pose; 'label' is the detection label; 'score' is the vision score; 'post_id' is the image; 'bbox' is the bounding box of the detected object (xmin,ymin,width,height); 'attrs' are the attributes that fire within the bounding box, along with their score; and 'preps' is a basic computed spatial relation derived from the bounding boxes.
+Definitions:
+'id':  A unique identifier
+'type':  1 for object or 2 for action/pose
+'label':  The detection label
+'score':  The vision score
+'post_id':  The image 
+'bbox':  The bounding box of the detected object (xmin,ymin,width,height)
+'attrs':  The attributes that fire within the bounding box, along with their scores
+'preps':  A basic computed spatial relation derived from the bounding boxes.  MUST be either 'above', 'below', 'by', or 'against', as defined in KB/preps.  Possible prepositions from these basic ones are determined by corpus frequencies of the given objects.
+
+### Output ###
+By default, Midge outputs a set of possible parse trees for each image.  Nodes in the tree are formatted as (TAG, word, likelihood) triples.  Likelihood is defined from the corpus frequencies, with the given head noun object.
