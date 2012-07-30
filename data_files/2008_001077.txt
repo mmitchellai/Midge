@@ -1,0 +1,22 @@
+- id: 3
+  type: 1
+  label: table
+  score: -0.471753
+  post_id: 2008_001077.txt
+  bbox: [1.0, 111.0, 440.0, 257.0]
+  attrs: {'brown': 0.251063, 'colorful': 0.086585, 'golden': 0.102664, 'yellow': 0.000115, 'rusty': 0.12151, 'pink': 0.003494, 'striped': 0.038043, 'feathered': 0.003281, 'blue': 0.007523, 'gray': 0.025506, 'wooden': 0.970513, 'furry': 0.00189, 'clear': 0.002109, 'rectangular': 0.042042, 'black': 0.003438, 'dirty': 0.017307, 'orange': 0.720328, 'green': 0.002916, 'white': 0.008416, 'shiny': 0.001605, 'red': 0.012188}
+- id: 1+2
+  type: 1
+  label: bottle
+  score: 0.327051
+  post_id: 2008_001077.txt
+  bbox: (352.0, 1.0, 44.0, 146.0)
+  attrs: {'brown': 0.470582, 'colorful': 0.112585, 'golden': 0.078619, 'yellow': 0.064467, 'rusty': 0.085336, 'pink': 0.012451, 'striped': 0.077577, 'feathered': 0.075765, 'blue': 0.006174, 'gray': 0.057038, 'wooden': 0.021691, 'furry': 0.059141, 'clear': 0.0046, 'rectangular': 0.002334, 'black': 0.0083, 'dirty': 0.044191, 'orange': 0.020695, 'green': 0.008132, 'white': 0.057398, 'shiny': 0.21314, 'red': 0.094093}
+- id: 4
+  type: 1
+  label: person
+  score: 0.234964
+  post_id: 2008_001077.txt
+  bbox: [222.0, 105.0, 51.0, 142.0]
+  attrs: {'brown': 0.754598, 'colorful': 0.345111, 'golden': 0.087026, 'yellow': 0.003095, 'rusty': 0.040722, 'pink': 0.003567, 'striped': 0.055513, 'feathered': 0.067147, 'blue': 0.002469, 'gray': 0.003362, 'wooden': 0.753603, 'furry': 0.009025, 'clear': 0.002483, 'rectangular': 0.046304, 'black': 0.000715, 'dirty': 0.010292, 'orange': 0.047537, 'green': 0.003446, 'white': 0.013595, 'shiny': 0.011915, 'red': 0.035784}
+  preps: {'4,3': 'against', '3,4': 'by', '4,1+2': 'by', '1+2,3': 'above', '3,1+2': 'below', '1+2,4': 'by'}

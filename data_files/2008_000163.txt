@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: car
+  score: -0.230476
+  post_id: 2008_000163.txt
+  bbox: [1.0, 65.0, 499.0, 255.0]
+  attrs: {'brown': 0.000637, 'colorful': 0.007984, 'golden': 0.101763, 'yellow': 0.102193, 'rusty': 0.017861, 'pink': 0.003479, 'striped': 0.141746, 'feathered': 0.066313, 'blue': 0.008136, 'gray': 0.274121, 'wooden': 0.004085, 'furry': 0.008227, 'clear': 0.015973, 'rectangular': 0.312545, 'black': 0.065598, 'dirty': 0.022058, 'orange': 0.011698, 'green': 0.016197, 'white': 0.041183, 'shiny': 0.270018, 'red': 0.012699}
+  preps: {}

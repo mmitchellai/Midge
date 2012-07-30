@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: sky
+  score: 0.949139
+  post_id: 2008_000335.txt
+  bbox: [64.0, 38.0, 377.0, 147.0]
+  attrs: {'brown': 0.018853, 'colorful': 0.061227, 'golden': 0.073179, 'yellow': 0.006765, 'rusty': 0.050299, 'pink': 0.002161, 'striped': 0.002878, 'feathered': 0.069583, 'blue': 0.571586, 'gray': 0.570315, 'wooden': 0.009729, 'furry': 0.000332, 'clear': 0.759303, 'rectangular': 0.067174, 'black': 0.012524, 'dirty': 0.027361, 'orange': 0.005298, 'green': 0.007537, 'white': 0.012733, 'shiny': 0.003181, 'red': 0.00454}
+- id: 1
+  type: 1
+  label: cow
+  score: -0.674386
+  post_id: 2008_000335.txt
+  bbox: [98.0, 98.0, 242.0, 145.0]
+  attrs: {'brown': 0.029408, 'colorful': 0.096156, 'golden': 0.506392, 'yellow': 0.038993, 'rusty': 0.090902, 'pink': 0.008614, 'striped': 0.030062, 'feathered': 0.345758, 'blue': 0.028448, 'gray': 0.010711, 'wooden': 0.045647, 'furry': 0.160361, 'clear': 0.033369, 'rectangular': 0.025997, 'black': 0.039571, 'dirty': 0.268903, 'orange': 0.031291, 'green': 0.013342, 'white': 0.003223, 'shiny': 0.411671, 'red': 0.014437}
+  preps: {'1,2': 'against', '2,1': 'above'}

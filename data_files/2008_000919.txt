@@ -1,0 +1,15 @@
+- id: 4
+  type: 1
+  label: sky
+  score: 0.999253
+  post_id: 2008_000919.txt
+  bbox: [190.0, 1.0, 251.0, 188.0]
+  attrs: {'brown': 0.012478, 'colorful': 0.427307, 'golden': 0.025182, 'yellow': 0.01752, 'rusty': 0.076281, 'pink': 0.001316, 'striped': 0.004951, 'feathered': 0.067737, 'blue': 0.789203, 'gray': 0.010392, 'wooden': 0.007722, 'furry': 0.008501, 'clear': 0.43499, 'rectangular': 0.070142, 'black': 0.006788, 'dirty': 0.085685, 'orange': 0.005644, 'green': 0.005343, 'white': 0.010337, 'shiny': 0.02215, 'red': 0.005168}
+- id: 1
+  type: 1
+  label: cow
+  score: -0.648624
+  post_id: 2008_000919.txt
+  bbox: [1.0, 1.0, 271.0, 361.0]
+  attrs: {'brown': 0.011672, 'colorful': 0.020552, 'golden': 0.07379, 'yellow': 0.193432, 'rusty': 0.171083, 'pink': 0.008447, 'striped': 0.012773, 'feathered': 0.068008, 'blue': 0.014184, 'gray': 0.017772, 'wooden': 0.035354, 'furry': 0.023354, 'clear': 0.081631, 'rectangular': 0.010724, 'black': 0.362778, 'dirty': 0.038565, 'orange': 0.010793, 'green': 0.041431, 'white': 0.010081, 'shiny': 0.023035, 'red': 0.026292}
+  preps: {'4,1': 'by', '1,4': 'by'}

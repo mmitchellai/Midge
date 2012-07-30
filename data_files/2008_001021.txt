@@ -1,0 +1,8 @@
+- id: 2
+  type: 1
+  label: road
+  score: 0.912042
+  post_id: 2008_001021.txt
+  bbox: [1.0, 1.0, 141.0, 125.0]
+  attrs: {'brown': 0.038553, 'colorful': 0.01004, 'golden': 0.018441, 'yellow': 0.012501, 'rusty': 0.270325, 'pink': 0.008564, 'striped': 0.007832, 'feathered': 0.068008, 'blue': 0.063665, 'gray': 0.048744, 'wooden': 0.02285, 'furry': 0.000142, 'clear': 0.307075, 'rectangular': 0.008385, 'black': 0.020133, 'dirty': 0.032741, 'orange': 0.047775, 'green': 0.044745, 'white': 0.023984, 'shiny': 0.00315, 'red': 0.028665}
+  preps: {}

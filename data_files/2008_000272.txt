@@ -1,0 +1,15 @@
+- id: 1
+  type: 1
+  label: tv
+  score: -0.091637
+  post_id: 2008_000272.txt
+  bbox: [90.0, 188.0, 87.0, 78.0]
+  attrs: {'brown': 0.052586, 'colorful': 0.055883, 'golden': 0.150693, 'yellow': 0.127121, 'rusty': 0.022979, 'pink': 0.002587, 'striped': 0.060907, 'feathered': 0.068008, 'blue': 0.258944, 'gray': 0.085262, 'wooden': 0.014792, 'furry': 0.011148, 'clear': 0.003771, 'rectangular': 0.360948, 'black': 0.00183, 'dirty': 0.013045, 'orange': 0.007993, 'green': 0.006271, 'white': 0.017273, 'shiny': 0.007282, 'red': 0.33358}
+- id: 2
+  type: 1
+  label: window
+  score: -0.792448
+  post_id: 2008_000272.txt
+  bbox: [404.0, 66.0, 90.0, 129.0]
+  attrs: {'brown': 0.021686, 'colorful': 0.38875, 'golden': 0.019193, 'yellow': 0.005705, 'rusty': 0.18875, 'pink': 0.040459, 'striped': 0.371901, 'feathered': 0.068, 'blue': 0.029853, 'gray': 0.025522, 'wooden': 0.055734, 'furry': 0.000514, 'clear': 0.027036, 'rectangular': 0.061901, 'black': 0.007825, 'dirty': 0.037602, 'orange': 0.013064, 'green': 0.0053, 'white': 0.003502, 'shiny': 0.00588, 'red': 0.044254}
+  preps: {'2,1': 'by', '1,2': 'by'}

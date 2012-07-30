@@ -1,0 +1,22 @@
+- id: 6
+  type: 1
+  label: building
+  score: 0.921208
+  post_id: 2008_000237.txt
+  bbox: [64.0, 1.0, 188.0, 94.0]
+  attrs: {'brown': 0.01033, 'colorful': 0.447314, 'golden': 0.101234, 'yellow': 0.039541, 'rusty': 0.725465, 'pink': 0.013565, 'striped': 0.051627, 'feathered': 0.063867, 'blue': 0.060158, 'gray': 0.020531, 'wooden': 0.011368, 'furry': 0.016923, 'clear': 0.011413, 'rectangular': 0.054529, 'black': 0.011445, 'dirty': 0.015657, 'orange': 0.029084, 'green': 0.006554, 'white': 0.002968, 'shiny': 0.012196, 'red': 0.039611}
+- id: 1+2+3
+  type: 1
+  label: car
+  score: 1.703066
+  post_id: 2008_000237.txt
+  bbox: (119.0, 80.0, 216.0, 59.0)
+  attrs: {'brown': 0.000183, 'colorful': 0.090251, 'golden': 0.017556, 'yellow': 0.00192, 'rusty': 0.053099, 'pink': 0.040582, 'striped': 0.121286, 'feathered': 0.050559, 'blue': 0.003589, 'gray': 0.01993, 'wooden': 0.008196, 'furry': 0.002078, 'clear': 0.009903, 'rectangular': 0.002509, 'black': 0.016017, 'dirty': 0.022137, 'orange': 0.003654, 'green': 0.003033, 'white': 0.00106, 'shiny': 0.387491, 'red': 0.760575}
+- id: 4+5
+  type: 1
+  label: person
+  score: 0.21872
+  post_id: 2008_000237.txt
+  bbox: (237.0, 293.0, 78.0, 79.0)
+  attrs: {'brown': 0.002037, 'colorful': 0.011154, 'golden': 0.050881, 'yellow': 0.025367, 'rusty': 0.177316, 'pink': 0.002893, 'striped': 0.13672, 'feathered': 0.062668, 'blue': 0.009752, 'gray': 0.453801, 'wooden': 0.021553, 'furry': 0.233825, 'clear': 0.011901, 'rectangular': 0.081269, 'black': 0.087273, 'dirty': 0.13827, 'orange': 0.008201, 'green': 0.008529, 'white': 0.003614, 'shiny': 0.011682, 'red': 0.016242}
+  preps: {'1+2+3,4+5': 'above', '6,4+5': 'above', '4+5,6': 'below', '6,1+2+3': 'above', '4+5,1+2+3': 'below', '1+2+3,6': 'below'}

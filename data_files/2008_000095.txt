@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: grass
+  score: 0.970039
+  post_id: 2008_000095.txt
+  bbox: [1.0, 1.0, 329.0, 440.0]
+  attrs: {'brown': 0.018482, 'colorful': 0.028355, 'golden': 0.000672, 'yellow': 0.065207, 'rusty': 0.012698, 'pink': 0.011274, 'striped': 0.105611, 'feathered': 0.0971, 'blue': 0.021633, 'gray': 0.013693, 'wooden': 0.010797, 'furry': 0.321484, 'clear': 0.139594, 'rectangular': 1.5e-05, 'black': 0.006846, 'dirty': 0.063587, 'orange': 0.034319, 'green': 0.863051, 'white': 0.012566, 'shiny': 0.001892, 'red': 0.281474}
+  preps: {}

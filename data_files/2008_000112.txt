@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: road
+  score: 0.991757
+  post_id: 2008_000112.txt
+  bbox: [1.0, 1.0, 377.0, 329.0]
+  attrs: {'brown': 0.005916, 'colorful': 0.037424, 'golden': 0.132144, 'yellow': 0.021476, 'rusty': 0.032883, 'pink': 0.005099, 'striped': 0.025678, 'feathered': 0.006428, 'blue': 0.093576, 'gray': 0.643806, 'wooden': 0.000429, 'furry': 0.392252, 'clear': 0.018545, 'rectangular': 0.015536, 'black': 0.007748, 'dirty': 0.201593, 'orange': 0.011291, 'green': 0.015235, 'white': 0.003448, 'shiny': 0.007414, 'red': 0.061092}
+- id: 1
+  type: 1
+  label: cat
+  score: -0.303918
+  post_id: 2008_000112.txt
+  bbox: [1.0, 1.0, 436.0, 374.0]
+  attrs: {'brown': 0.005421, 'colorful': 0.049117, 'golden': 0.119831, 'yellow': 0.020433, 'rusty': 0.032615, 'pink': 0.005471, 'striped': 0.026699, 'feathered': 0.050971, 'blue': 0.096518, 'gray': 0.786281, 'wooden': 0.000217, 'furry': 0.447092, 'clear': 0.04323, 'rectangular': 0.026463, 'black': 0.007514, 'dirty': 0.13114, 'orange': 0.014055, 'green': 0.015299, 'white': 0.002742, 'shiny': 0.014313, 'red': 0.074619}
+  preps: {'1,2': 'against', '2,1': 'against'}

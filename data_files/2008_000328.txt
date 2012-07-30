@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: person
+  score: -0.021237
+  post_id: 2008_000328.txt
+  bbox: [297.0, 57.0, 31.0, 87.0]
+  attrs: {'brown': 0.001395, 'colorful': 0.548286, 'golden': 0.017063, 'yellow': 0.00783, 'rusty': 0.395146, 'pink': 0.003877, 'striped': 0.163703, 'feathered': 0.068895, 'blue': 0.005916, 'gray': 0.231923, 'wooden': 0.163461, 'furry': 0.010976, 'clear': 0.019184, 'rectangular': 0.003523, 'black': 0.012454, 'dirty': 0.029852, 'orange': 0.019999, 'green': 0.003712, 'white': 0.004511, 'shiny': 0.136289, 'red': 0.099426}
+  preps: {}

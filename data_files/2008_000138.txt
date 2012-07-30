@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: person
+  score: 0.049266
+  post_id: 2008_000138.txt
+  bbox: [185.0, 93.0, 72.0, 201.0]
+  attrs: {'brown': 0.07052, 'colorful': 0.044619, 'golden': 0.129157, 'yellow': 0.275446, 'rusty': 0.117442, 'pink': 0.07131, 'striped': 0.003588, 'feathered': 0.067969, 'blue': 0.001917, 'gray': 0.008762, 'wooden': 0.592954, 'furry': 0.022188, 'clear': 0.752343, 'rectangular': 0.169571, 'black': 0.020046, 'dirty': 0.018507, 'orange': 0.019848, 'green': 0.005469, 'white': 0.010477, 'shiny': 0.017712, 'red': 0.066168}
+- id: 1
+  type: 1
+  label: dog
+  score: -0.774582
+  post_id: 2008_000138.txt
+  bbox: [193.0, 345.0, 87.0, 55.0]
+  attrs: {'brown': 0.283575, 'colorful': 0.019675, 'golden': 0.214084, 'yellow': 0.087243, 'rusty': 0.210375, 'pink': 0.06876, 'striped': 0.031948, 'feathered': 0.068057, 'blue': 0.001824, 'gray': 0.063511, 'wooden': 0.287711, 'furry': 0.030589, 'clear': 0.446395, 'rectangular': 0.001753, 'black': 0.050562, 'dirty': 0.032503, 'orange': 0.041725, 'green': 0.010286, 'white': 0.016146, 'shiny': 0.049003, 'red': 0.043108}
+  preps: {'1,2': 'below', '2,1': 'above'}

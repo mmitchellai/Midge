@@ -1,0 +1,22 @@
+- id: 3
+  type: 1
+  label: sky
+  score: 0.948421
+  post_id: 2008_000437.txt
+  bbox: [1.0, 1.0, 188.0, 282.0]
+  attrs: {'brown': 0.018735, 'colorful': 0.010033, 'golden': 0.594092, 'yellow': 0.00927, 'rusty': 0.196943, 'pink': 0.001294, 'striped': 0.006802, 'feathered': 0.068137, 'blue': 0.079551, 'gray': 0.014973, 'wooden': 0.012474, 'furry': 0.003237, 'clear': 0.806891, 'rectangular': 0.016215, 'black': 0.012859, 'dirty': 0.030459, 'orange': 0.0093, 'green': 0.021418, 'white': 0.013189, 'shiny': 0.033953, 'red': 0.020966}
+- id: 2
+  type: 1
+  label: road
+  score: 0.971931
+  post_id: 2008_000437.txt
+  bbox: [1.0, 142.0, 377.0, 188.0]
+  attrs: {'brown': 0.003284, 'colorful': 0.313933, 'golden': 0.118844, 'yellow': 0.030058, 'rusty': 0.392013, 'pink': 0.004198, 'striped': 0.011601, 'feathered': 0.063634, 'blue': 0.600496, 'gray': 0.012058, 'wooden': 0.004337, 'furry': 0.005742, 'clear': 0.405412, 'rectangular': 0.031422, 'black': 0.0081, 'dirty': 0.220841, 'orange': 0.019609, 'green': 0.034485, 'white': 0.00795, 'shiny': 0.104559, 'red': 0.041935}
+- id: 1
+  type: 1
+  label: boat
+  score: -0.766939
+  post_id: 2008_000437.txt
+  bbox: [49.0, 345.0, 95.0, 30.0]
+  attrs: {'brown': 0.005744, 'colorful': 0.414685, 'golden': 0.138294, 'yellow': 0.020647, 'rusty': 0.174226, 'pink': 0.002689, 'striped': 0.054321, 'feathered': 0.065246, 'blue': 0.103588, 'gray': 0.103981, 'wooden': 0.003752, 'furry': 0.043755, 'clear': 0.051781, 'rectangular': 0.011131, 'black': 0.007731, 'dirty': 0.153306, 'orange': 0.012354, 'green': 0.009513, 'white': 0.042082, 'shiny': 0.319713, 'red': 0.067046}
+  preps: {'1,2': 'below', '3,1': 'above', '3,2': 'against', '1,3': 'below', '2,1': 'above', '2,3': 'by'}

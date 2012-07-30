@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: tv
+  score: -0.317269
+  post_id: 2008_000495.txt
+  bbox: [31.0, 61.0, 133.0, 118.0]
+  attrs: {'brown': 0.023172, 'colorful': 0.425834, 'golden': 0.096777, 'yellow': 0.010701, 'rusty': 0.039398, 'pink': 0.010564, 'striped': 0.094937, 'feathered': 0.067999, 'blue': 0.023019, 'gray': 0.014809, 'wooden': 0.074885, 'furry': 0.001908, 'clear': 0.201629, 'rectangular': 0.026966, 'black': 0.006521, 'dirty': 0.041466, 'orange': 0.007604, 'green': 0.009638, 'white': 0.047065, 'shiny': 0.030524, 'red': 0.015219}
+  preps: {}

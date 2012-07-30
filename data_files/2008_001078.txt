@@ -1,0 +1,29 @@
+- id: 2+3
+  type: 1
+  label: plant
+  score: -0.497338
+  post_id: 2008_001078.txt
+  bbox: (1.0, 1.0, 126.0, 168.0)
+  attrs: {'brown': 0.00195, 'colorful': 0.15755, 'golden': 0.092244, 'yellow': 0.02251, 'rusty': 0.281322, 'pink': 0.012488, 'striped': 0.050937, 'feathered': 0.150722, 'blue': 0.120521, 'gray': 0.828768, 'wooden': 0.001354, 'furry': 0.164168, 'clear': 0.051284, 'rectangular': 0.014558, 'black': 0.069349, 'dirty': 0.101464, 'orange': 0.030561, 'green': 0.063913, 'white': 0.006277, 'shiny': 0.099503, 'red': 0.030971}
+- id: 5
+  type: 1
+  label: tree
+  score: 0.905157
+  post_id: 2008_001078.txt
+  bbox: [1.0, 1.0, 125.0, 94.0]
+  attrs: {'brown': 0.008772, 'colorful': 0.183064, 'golden': 0.1049, 'yellow': 0.011974, 'rusty': 0.315166, 'pink': 0.010271, 'striped': 0.139364, 'feathered': 0.08616, 'blue': 0.126395, 'gray': 0.436373, 'wooden': 0.000631, 'furry': 0.306225, 'clear': 0.079125, 'rectangular': 0.00077, 'black': 0.01566, 'dirty': 0.046521, 'orange': 0.022308, 'green': 0.136177, 'white': 0.01098, 'shiny': 0.033809, 'red': 0.058683}
+- id: 1
+  type: 1
+  label: dog
+  score: -0.747369
+  post_id: 2008_001078.txt
+  bbox: [131.0, 105.0, 285.0, 181.0]
+  attrs: {'brown': 0.023062, 'colorful': 0.067951, 'golden': 0.166468, 'yellow': 0.101505, 'rusty': 0.078117, 'pink': 0.002645, 'striped': 0.034305, 'feathered': 0.066888, 'blue': 0.181221, 'gray': 0.00321, 'wooden': 0.035644, 'furry': 0.030326, 'clear': 0.00939, 'rectangular': 0.246688, 'black': 0.741834, 'dirty': 0.018277, 'orange': 0.010177, 'green': 0.008946, 'white': 0.010291, 'shiny': 0.166666, 'red': 0.060645}
+- id: 4
+  type: 1
+  label: road
+  score: 0.91246
+  post_id: 2008_001078.txt
+  bbox: [190.0, 236.0, 251.0, 94.0]
+  attrs: {'brown': 0.036937, 'colorful': 0.029809, 'golden': 0.087421, 'yellow': 0.028366, 'rusty': 0.095781, 'pink': 0.002883, 'striped': 0.026716, 'feathered': 0.067488, 'blue': 0.113175, 'gray': 0.282685, 'wooden': 0.004776, 'furry': 0.128909, 'clear': 0.011544, 'rectangular': 0.025488, 'black': 0.052473, 'dirty': 0.289788, 'orange': 0.016495, 'green': 0.025023, 'white': 0.002004, 'shiny': 0.007943, 'red': 0.080113}
+  preps: {'4,1': 'against', '1,5': 'below', '1,2+3': 'by', '4,5': 'below', '4,2+3': 'below', '5,2+3': 'against', '1,4': 'above', '5,1': 'above', '5,4': 'above', '2+3,5': 'against', '2+3,4': 'by', '2+3,1': 'by'}

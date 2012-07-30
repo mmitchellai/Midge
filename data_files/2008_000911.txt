@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: bottle
+  score: -0.252243
+  post_id: 2008_000911.txt
+  bbox: [64.0, 170.0, 84.0, 273.0]
+  attrs: {'brown': 0.00096, 'colorful': 0.678241, 'golden': 0.01788, 'yellow': 0.006055, 'rusty': 0.09703, 'pink': 0.021451, 'striped': 0.07018, 'feathered': 0.078346, 'blue': 0.00149, 'gray': '7e-06', 'wooden': 0.317813, 'furry': 0.058919, 'clear': 0.008677, 'rectangular': 0.000272, 'black': 0.002541, 'dirty': 0.005836, 'orange': 0.008304, 'green': 0.004934, 'white': 0.001966, 'shiny': 0.077365, 'red': 0.533724}
+  preps: {}

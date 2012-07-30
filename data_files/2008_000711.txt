@@ -1,0 +1,8 @@
+- id: 1+2+3
+  type: 1
+  label: cow
+  score: -0.579731
+  post_id: 2008_000711.txt
+  bbox: (1.0, 1.0, 165.0, 256.0)
+  attrs: {'brown': 0.311173, 'colorful': 0.733711, 'golden': 0.016992, 'yellow': 0.042313, 'rusty': 0.570749, 'pink': 0.005067, 'striped': 0.046013, 'feathered': 0.06683, 'blue': 0.011835, 'gray': 0.003452, 'wooden': 0.002501, 'furry': 0.171479, 'clear': 0.001053, 'rectangular': 0.000329, 'black': 0.004368, 'dirty': 0.016276, 'orange': 0.01007, 'green': 0.007989, 'white': 0.001562, 'shiny': 0.000641, 'red': 0.130836}
+  preps: {}

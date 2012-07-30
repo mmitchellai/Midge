@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: dog
+  score: -0.7656
+  post_id: 2008_000897.txt
+  bbox: [247.0, 277.0, 103.0, 68.0]
+  attrs: {'brown': 0.800996, 'colorful': 0.045186, 'golden': 0.08552, 'yellow': 0.061922, 'rusty': 0.271155, 'pink': 0.019262, 'striped': 0.024021, 'feathered': 0.071615, 'blue': 0.006017, 'gray': 0.023709, 'wooden': 0.014913, 'furry': 0.239942, 'clear': 0.025924, 'rectangular': 7.9e-05, 'black': 0.014061, 'dirty': 0.115444, 'orange': 0.026233, 'green': 0.008029, 'white': 0.028128, 'shiny': 0.01228, 'red': 0.090336}
+  preps: {}

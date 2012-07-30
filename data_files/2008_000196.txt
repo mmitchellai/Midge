@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: plant
+  score: -0.875822
+  post_id: 2008_000196.txt
+  bbox: [431.0, 205.0, 67.0, 89.0]
+  attrs: {'brown': 0.062404, 'colorful': 0.194092, 'golden': 0.00248, 'yellow': 0.049521, 'rusty': 0.101329, 'pink': 0.008912, 'striped': 0.21602, 'feathered': 0.081148, 'blue': 0.007069, 'gray': 0.021693, 'wooden': 0.234547, 'furry': 0.128428, 'clear': 0.01578, 'rectangular': 6.8e-05, 'black': 0.006825, 'dirty': 0.007543, 'orange': 0.023911, 'green': 0.649463, 'white': 0.004644, 'shiny': 0.003472, 'red': 0.13223}
+- id: 1
+  type: 1
+  label: bicycle
+  score: -0.588068
+  post_id: 2008_000196.txt
+  bbox: [1.0, 29.0, 194.0, 277.0]
+  attrs: {'brown': 0.001343, 'colorful': 0.185346, 'golden': 0.109075, 'yellow': 0.072899, 'rusty': 0.340711, 'pink': 0.013578, 'striped': 0.102445, 'feathered': 0.086693, 'blue': 0.026204, 'gray': 0.033335, 'wooden': 0.001046, 'furry': 0.082234, 'clear': 0.026911, 'rectangular': 0.015595, 'black': 0.384529, 'dirty': 0.011232, 'orange': 0.013941, 'green': 0.019619, 'white': 0.002124, 'shiny': 0.743013, 'red': 0.046699}
+  preps: {'1,2': 'by', '2,1': 'by'}

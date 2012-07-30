@@ -1,0 +1,15 @@
+- id: 1
+  type: 1
+  label: person
+  score: 2.293112
+  post_id: 2008_000648.txt
+  bbox: [131.0, 27.0, 181.0, 304.0]
+  attrs: {'brown': 0.001301, 'colorful': 0.404465, 'golden': 0.004806, 'yellow': 0.040105, 'rusty': 0.122187, 'pink': 0.070555, 'striped': 0.065019, 'feathered': 0.067598, 'blue': 0.060622, 'gray': 0.043102, 'wooden': 0.183952, 'furry': 0.013979, 'clear': 0.021893, 'rectangular': 0.010452, 'black': 0.009447, 'dirty': 0.074239, 'orange': 0.004792, 'green': 0.00587, 'white': 0.036546, 'shiny': 0.168011, 'red': 0.098644}
+- id: 2
+  type: 1
+  label: sofa
+  score: -0.508664
+  post_id: 2008_000648.txt
+  bbox: [43.0, 43.0, 457.0, 288.0]
+  attrs: {'brown': 0.003435, 'colorful': 0.319643, 'golden': 0.005851, 'yellow': 0.246908, 'rusty': 0.160948, 'pink': 0.143998, 'striped': 0.058333, 'feathered': 0.066189, 'blue': 0.159268, 'gray': 0.012261, 'wooden': 0.226239, 'furry': 0.011566, 'clear': 0.01904, 'rectangular': 0.036501, 'black': 0.021116, 'dirty': 0.036042, 'orange': 0.008099, 'green': 0.011309, 'white': 0.011976, 'shiny': 0.076051, 'red': 0.060495}
+  preps: {'2,1': 'by', '1,2': 'against'}

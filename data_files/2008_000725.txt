@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: person
+  score: -0.106327
+  post_id: 2008_000725.txt
+  bbox: [12.0, 75.0, 83.0, 94.0]
+  attrs: {'brown': 0.006306, 'colorful': 0.025828, 'golden': 0.051201, 'yellow': 0.072492, 'rusty': 0.158477, 'pink': 0.004014, 'striped': 0.020625, 'feathered': 0.068008, 'blue': 0.008563, 'gray': 0.160412, 'wooden': 0.017914, 'furry': 0.017085, 'clear': 0.065882, 'rectangular': 0.018696, 'black': 0.197965, 'dirty': 0.012852, 'orange': 0.017192, 'green': 0.006314, 'white': 0.002984, 'shiny': 0.031049, 'red': 0.059647}
+- id: 1
+  type: 1
+  label: bicycle
+  score: -0.136876
+  post_id: 2008_000725.txt
+  bbox: [118.0, 105.0, 90.0, 129.0]
+  attrs: {'brown': 0.000565, 'colorful': 0.147524, 'golden': 0.097542, 'yellow': 0.053763, 'rusty': 0.229255, 'pink': 0.004285, 'striped': 0.099792, 'feathered': 0.018936, 'blue': 0.063577, 'gray': 0.237709, 'wooden': 0.009346, 'furry': 0.048017, 'clear': 0.020855, 'rectangular': 0.004259, 'black': 0.125127, 'dirty': 0.006732, 'orange': 0.014432, 'green': 0.009093, 'white': 0.002821, 'shiny': 0.73754, 'red': 0.042627}
+  preps: {'1,2': 'by', '2,1': 'by'}

@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: bus
+  score: 0.143464
+  post_id: 2008_000982.txt
+  bbox: [161.0, 33.0, 319.0, 255.0]
+  attrs: {'brown': 0.000754, 'colorful': 0.195129, 'golden': 0.204739, 'yellow': 0.009012, 'rusty': 0.036998, 'pink': 0.002938, 'striped': 0.072976, 'feathered': 0.067898, 'blue': 0.030692, 'gray': 0.126656, 'wooden': 0.004795, 'furry': 0.046231, 'clear': 0.029256, 'rectangular': 0.427061, 'black': 0.015062, 'dirty': 0.196113, 'orange': 0.00854, 'green': 0.012256, 'white': 0.038049, 'shiny': 0.582593, 'red': 0.031314}
+  preps: {}

@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: boat
+  score: -0.698692
+  post_id: 2008_001041.txt
+  bbox: [111.0, 38.0, 220.0, 293.0]
+  attrs: {'brown': 0.002794, 'colorful': 0.067173, 'golden': 0.020073, 'yellow': 0.012393, 'rusty': 0.077218, 'pink': 0.006625, 'striped': 0.081234, 'feathered': 0.068031, 'blue': 0.134545, 'gray': 0.387531, 'wooden': 0.010432, 'furry': 0.018, 'clear': 0.110068, 'rectangular': 0.003111, 'black': 0.002281, 'dirty': 0.085963, 'orange': 0.013885, 'green': 0.009039, 'white': 0.035879, 'shiny': 0.036971, 'red': 0.078255}
+  preps: {}

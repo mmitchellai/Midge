@@ -1,0 +1,15 @@
+- id: 2
+  type: 1
+  label: sky
+  score: 0.995978
+  post_id: 2008_000144.txt
+  bbox: [1.0, 85.0, 377.0, 209.0]
+  attrs: {'brown': 0.001191, 'colorful': 0.624554, 'golden': 0.024754, 'yellow': 0.004846, 'rusty': 0.096277, 'pink': 0.085377, 'striped': 0.059863, 'feathered': 0.06583, 'blue': 0.028144, 'gray': '3e-06', 'wooden': 0.012805, 'furry': 0.020756, 'clear': 0.161886, 'rectangular': 0.019114, 'black': 0.008773, 'dirty': 0.154109, 'orange': 0.01121, 'green': 0.002998, 'white': 0.011914, 'shiny': 0.254896, 'red': 0.046689}
+- id: 1
+  type: 1
+  label: motorcycle
+  score: -0.529322
+  post_id: 2008_000144.txt
+  bbox: [170.0, 128.0, 189.0, 168.0]
+  attrs: {'brown': 0.00203, 'colorful': 0.745628, 'golden': 0.034192, 'yellow': 0.004555, 'rusty': 0.17148, 'pink': 0.169793, 'striped': 0.292289, 'feathered': 1.5e-05, 'blue': 0.056086, 'wooden': 0.005484, 'furry': 0.024724, 'clear': 0.070208, 'rectangular': 0.041945, 'black': 0.050287, 'dirty': 0.014972, 'orange': 0.005399, 'green': 0.003193, 'white': 0.014411, 'shiny': 0.608759, 'red': 0.01857}
+  preps: {'1,2': 'against', '2,1': 'by'}

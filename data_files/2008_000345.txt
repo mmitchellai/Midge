@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: cat
+  score: -0.689879
+  post_id: 2008_000345.txt
+  bbox: [138.0, 104.0, 136.0, 170.0]
+  attrs: {'brown': 0.356624, 'colorful': 0.030501, 'golden': 0.463361, 'yellow': 0.129448, 'rusty': 0.306124, 'pink': 0.010771, 'striped': 0.0577, 'feathered': 0.302133, 'blue': 0.003705, 'gray': 0.003826, 'wooden': 0.098394, 'furry': 0.45704, 'clear': 0.029113, 'rectangular': 0.000544, 'black': 0.050187, 'dirty': 0.058912, 'orange': 0.032073, 'green': 0.005443, 'white': 0.003919, 'shiny': 0.169214, 'red': 0.029248}
+  preps: {}

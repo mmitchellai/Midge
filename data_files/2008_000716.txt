@@ -1,0 +1,8 @@
+- id: 1+2+3
+  type: 1
+  label: airplane
+  score: 0.43311
+  post_id: 2008_000716.txt
+  bbox: (1.0, 79.0, 415.0, 129.0)
+  attrs: {'brown': 0.006504, 'colorful': 0.035921, 'golden': 0.533191, 'yellow': 0.011286, 'rusty': 0.290667, 'pink': 0.002011, 'striped': 0.014532, 'feathered': 0.002936, 'blue': 0.034633, 'gray': 0.016224, 'wooden': 0.024548, 'furry': 0.007068, 'clear': 0.283494, 'rectangular': 0.009056, 'black': 0.006159, 'dirty': 0.03357, 'orange': 0.0101, 'green': 0.015774, 'white': 0.011591, 'shiny': 0.733722, 'red': 0.02935}
+  preps: {}

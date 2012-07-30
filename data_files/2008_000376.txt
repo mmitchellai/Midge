@@ -1,0 +1,15 @@
+- id: 1
+  type: 1
+  label: person
+  score: 0.952531
+  post_id: 2008_000376.txt
+  bbox: [80.0, 1.0, 314.0, 332.0]
+  attrs: {'brown': 0.020637, 'colorful': 0.190967, 'golden': 0.379715, 'yellow': 0.024517, 'rusty': 0.572644, 'pink': 0.033144, 'striped': 0.052184, 'feathered': 0.055483, 'blue': 0.005806, 'gray': 0.022488, 'wooden': 0.012453, 'furry': 0.014925, 'clear': 0.008704, 'rectangular': 0.040764, 'black': 0.027162, 'dirty': 0.113272, 'orange': 0.025386, 'green': 0.007391, 'white': 0.00121, 'shiny': 0.072813, 'red': 0.016505}
+- id: 2
+  type: 1
+  label: road
+  score: 0.90844
+  post_id: 2008_000376.txt
+  bbox: [64.0, 85.0, 377.0, 209.0]
+  attrs: {'brown': 0.003413, 'colorful': 0.013784, 'golden': 0.285424, 'yellow': 0.045253, 'rusty': 0.446357, 'pink': 0.004879, 'striped': 0.052071, 'feathered': 0.06646, 'blue': 0.01228, 'gray': 0.06801, 'wooden': 0.023682, 'furry': 0.011445, 'clear': 0.007187, 'rectangular': 0.245828, 'black': 0.312919, 'dirty': 0.068241, 'orange': 0.009857, 'green': 0.013347, 'white': 0.000746, 'shiny': 0.135918, 'red': 0.023669}
+  preps: {'2,1': 'against', '1,2': 'against'}

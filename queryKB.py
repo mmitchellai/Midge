@@ -1,5 +1,6 @@
 ### Copyright 2011, 2012 Margaret Mitchell
 ### Distributed under the terms of the GNU General Public License
+###
 ### This file is part of the vision-to-language system Midge.
 ### 
 ### Midge is free software: you can redistribute it and/or modify
@@ -394,15 +395,19 @@ class queryKB():
             first_rel = split_line[0]
             first_rel = first_rel.strip()
             split_rel = first_rel.split(" ")
+            # main_prep is the basic spatial relation,
+            # corresponding to a bunch of possible prepositions.
             main_prep = split_rel[1]
-            self.preps[('a', main_prep, 'b')] = {('a', 'b') : [], ('b', 'a'):[]}
+            self.preps[main_prep] = {'ab':[], 'ba':[]}
             for rel in split_line[1:]:
                 rel = rel.strip()
                 split_rel = rel.split(" ")
                 x = split_rel[0]
                 prep = split_rel[1]
                 y = split_rel[2]
-                self.preps[('a', main_prep, 'b')][(x, y)] += [prep]
+                # "ab" or "ba"
+                key = x + y
+                self.preps[main_prep][key] += [prep]
         if not self.read_pickle:
             pickle.dump(self.preps, open("pickled_files/preps.pk", "wb"))
 
@@ -822,11 +827,8 @@ class queryKB():
                 verb_hash[verb_tuple] = round(math.sqrt(i_prob * j_prob), 4)
         return verb_hash
 
-    def get_preps(self, a, prep, b, order):
-        if order == 'ab':
-            return self.preps[('a', prep, 'b')][('a', 'b')]
-        else:
-            return self.preps[('a', prep, 'b')][('b', 'a')]
+    def get_preps(self, prep, order):
+        return self.preps[prep][order]
 
     def get_PPs(self, i, j=None, c_preps=None):
         prep_hash = {}

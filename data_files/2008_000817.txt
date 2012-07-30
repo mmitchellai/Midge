@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: building
+  score: 0.997601
+  post_id: 2008_000817.txt
+  bbox: [1.0, 1.0, 440.0, 251.0]
+  attrs: {'brown': 0.290064, 'colorful': 0.392254, 'golden': 0.067899, 'yellow': 0.021285, 'rusty': 0.270859, 'pink': 0.004739, 'striped': 0.051186, 'feathered': 0.036361, 'blue': 0.028149, 'gray': 0.084084, 'wooden': 0.945931, 'furry': 0.047456, 'clear': 0.010525, 'rectangular': 0.01537, 'black': 0.004191, 'dirty': 0.024993, 'orange': 0.013203, 'green': 0.016015, 'white': 0.004438, 'shiny': 0.151254, 'red': 0.073024}
+  preps: {}

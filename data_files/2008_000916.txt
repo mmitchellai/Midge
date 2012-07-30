@@ -1,0 +1,43 @@
+- id: 1
+  type: 1
+  label: person
+  score: 1.516001
+  post_id: 2008_000916.txt
+  bbox: [353.0, 181.0, 33.0, 93.0]
+  attrs: {'brown': 0.049831, 'colorful': 0.60654, 'golden': 0.135014, 'yellow': 0.035509, 'rusty': 0.486251, 'pink': 0.010469, 'striped': 0.08461, 'feathered': 0.102142, 'blue': 0.037749, 'gray': '2e-06', 'wooden': 0.097847, 'furry': 0.041481, 'clear': 0.03442, 'rectangular': 0.004956, 'black': 0.037159, 'dirty': 0.007225, 'orange': 0.016462, 'green': 0.005374, 'white': 0.002851, 'shiny': 0.158114, 'red': 0.024488}
+- id: 3
+  type: 1
+  label: person
+  score: -0.00607
+  post_id: 2008_000916.txt
+  bbox: [65.0, 145.0, 111.0, 191.0]
+  attrs: {'brown': 0.007637, 'colorful': 0.017354, 'golden': 0.036646, 'yellow': 0.18003, 'rusty': 0.18583, 'pink': 0.003762, 'striped': 0.09379, 'feathered': 0.067332, 'blue': 0.021158, 'gray': 0.01281, 'wooden': 0.001382, 'furry': 0.107466, 'clear': 0.004538, 'rectangular': 0.007842, 'black': 0.311992, 'dirty': 0.007829, 'orange': 0.024068, 'green': 0.12917, 'white': 0.004398, 'shiny': 0.07502, 'red': 0.073691}
+- id: 2
+  type: 1
+  label: person
+  score: 0.910084
+  post_id: 2008_000916.txt
+  bbox: [387.0, 166.0, 36.0, 100.0]
+  attrs: {'brown': 0.018094, 'colorful': 0.947434, 'golden': 0.06916, 'yellow': 0.010678, 'rusty': 0.603174, 'pink': 0.022156, 'striped': 0.141296, 'feathered': 0.036171, 'blue': 0.006584, 'gray': 0.005519, 'wooden': 0.26026, 'furry': 0.025166, 'clear': 0.007035, 'rectangular': 0.00051, 'black': 0.00083, 'dirty': 0.004971, 'orange': 0.015076, 'green': 0.006941, 'white': 0.003825, 'shiny': 0.087041, 'red': 0.034148}
+- id: 4
+  type: 1
+  label: train
+  score: -0.120411
+  post_id: 2008_000916.txt
+  bbox: [65.0, 97.0, 351.0, 223.0]
+  attrs: {'brown': 0.003222, 'colorful': 0.207254, 'golden': 0.080742, 'yellow': 0.086955, 'rusty': 0.389655, 'pink': 0.009486, 'striped': 0.060846, 'feathered': 0.030428, 'blue': 0.010821, 'gray': 0.008385, 'wooden': 0.001701, 'furry': 0.042005, 'clear': 0.017433, 'rectangular': 0.01045, 'black': 0.13898, 'dirty': 0.012509, 'orange': 0.033469, 'green': 0.075022, 'white': 0.003311, 'shiny': 0.5, 'red': 0.05664}
+- id: 5
+  type: 1
+  label: grass
+  score: 0.930241
+  post_id: 2008_000916.txt
+  bbox: [1.0, 95.0, 125.0, 188.0]
+  attrs: {'brown': 0.007617, 'colorful': 0.074633, 'golden': 0.003589, 'yellow': 0.104734, 'rusty': 0.128552, 'pink': 0.009006, 'striped': 0.108944, 'feathered': 0.083639, 'blue': 0.022827, 'gray': 0.010536, 'wooden': 0.010454, 'furry': 0.386709, 'clear': 0.064577, 'rectangular': 4.8e-05, 'black': 0.021658, 'dirty': 0.017651, 'orange': 0.053567, 'green': 0.780084, 'white': 0.008731, 'shiny': 0.008457, 'red': 0.138975}
+- id: 6
+  type: 1
+  label: sky
+  score: 0.997839
+  post_id: 2008_000916.txt
+  bbox: [1.0, 1.0, 440.0, 188.0]
+  attrs: {'brown': 0.015235, 'colorful': 0.014202, 'golden': 0.690151, 'yellow': 0.006205, 'rusty': 0.224303, 'pink': 0.001424, 'striped': 0.010992, 'feathered': 0.06858, 'blue': 0.047489, 'gray': 0.012097, 'wooden': 0.020221, 'furry': 0.019255, 'clear': 0.755103, 'rectangular': 0.012502, 'black': 0.011522, 'dirty': 0.025946, 'orange': 0.013163, 'green': 0.034346, 'white': 0.01269, 'shiny': 0.062229, 'red': 0.017335}
+  preps: {'6,5': 'by', '1,6': 'below', '1,4': 'against', '1,5': 'by', '1,2': 'by', '1,3': 'by', '6,1': 'above', '5,4': 'by', '2,5': 'by', '2,4': 'against', '6,3': 'above', '2,6': 'below', '2,1': 'by', '6,4': 'above', '2,3': 'by', '4,3': 'by', '4,2': 'by', '4,1': 'by', '6,2': 'above', '4,6': 'below', '4,5': 'by', '3,4': 'against', '3,5': 'by', '3,6': 'below', '5,1': 'by', '5,6': 'below', '3,1': 'by', '3,2': 'by', '5,2': 'by', '5,3': 'by'}

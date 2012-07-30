@@ -1,0 +1,15 @@
+- id: 1
+  type: 1
+  label: bus
+  score: -0.387583
+  post_id: 2008_000032.txt
+  bbox: [91.0, 120.0, 387.0, 179.0]
+  attrs: {'brown': 0.001897, 'colorful': 0.588482, 'golden': 0.052288, 'yellow': 0.01728, 'rusty': 0.101277, 'pink': 0.017454, 'striped': 0.02335, 'feathered': 0.066201, 'blue': 0.008223, 'gray': '3e-06', 'wooden': 0.012808, 'furry': 0.002311, 'clear': 0.013023, 'rectangular': 0.311494, 'black': 0.352996, 'dirty': 0.018437, 'orange': 0.010471, 'green': 0.004586, 'white': 0.001197, 'shiny': 0.314364, 'red': 0.238423}
+- id: 2
+  type: 1
+  label: window
+  score: -0.786691
+  post_id: 2008_000032.txt
+  bbox: [198.0, 293.0, 59.0, 82.0]
+  attrs: {'brown': 0.005047, 'colorful': 0.00447, 'golden': 0.129988, 'yellow': 0.020983, 'rusty': 0.03541, 'pink': 0.003179, 'striped': 0.018606, 'feathered': 0.068008, 'blue': 0.015516, 'gray': 0.006074, 'wooden': 0.012172, 'furry': 0.00196, 'clear': 0.009144, 'rectangular': 0.995195, 'black': 0.899401, 'dirty': 0.022302, 'orange': 0.009081, 'green': 0.004103, 'white': 0.006044, 'shiny': 0.009429, 'red': 0.026717}
+  preps: {'2,1': 'below', '1,2': 'above'}

@@ -1,0 +1,22 @@
+- id: 2+3
+  type: 1
+  label: person
+  score: 1.006541
+  post_id: 2008_001031.txt
+  bbox: (38.0, 1.0, 146.0, 403.0)
+  attrs: {'brown': 0.01259, 'colorful': 0.530089, 'golden': 0.005101, 'yellow': 0.004317, 'rusty': 0.387569, 'pink': 0.010875, 'striped': 0.228643, 'feathered': 0.066861, 'blue': 0.006474, 'gray': 0.011957, 'wooden': 0.074427, 'furry': 0.006504, 'clear': 0.005521, 'rectangular': 5.3e-05, 'black': 0.002057, 'dirty': 0.012273, 'orange': 0.011965, 'green': 0.006138, 'white': 0.001872, 'shiny': 0.012762, 'red': 0.687107}
+- id: 1
+  type: 1
+  label: horse
+  score: 0.094482
+  post_id: 2008_001031.txt
+  bbox: [50.0, 147.0, 168.0, 290.0]
+  attrs: {'brown': 0.00746, 'colorful': 0.719497, 'golden': 0.007599, 'yellow': 0.017339, 'rusty': 0.462481, 'pink': 0.007929, 'striped': 0.16304, 'feathered': 0.061138, 'blue': 0.012755, 'gray': 0.010097, 'wooden': 0.451354, 'furry': 0.014507, 'clear': 0.019052, 'rectangular': 0.000243, 'black': 0.001341, 'dirty': 0.01504, 'orange': 0.014829, 'green': 0.004495, 'white': 0.001391, 'shiny': 0.008007, 'red': 0.337244}
+- id: 5
+  type: 1
+  label: tree
+  score: 0.972817
+  post_id: 2008_001031.txt
+  bbox: [1.0, 1.0, 297.0, 188.0]
+  attrs: {'brown': 0.006408, 'colorful': 0.485374, 'golden': 0.037832, 'yellow': 0.028897, 'rusty': 0.479111, 'pink': 0.017658, 'striped': 0.036605, 'feathered': 0.078342, 'blue': 0.014302, 'gray': 0.301625, 'wooden': 0.000164, 'furry': 0.129709, 'clear': 0.052718, 'rectangular': 0.000135, 'black': 0.085386, 'dirty': 0.031094, 'orange': 0.011628, 'green': 0.046245, 'white': 0.003141, 'shiny': 0.026532, 'red': 0.10498}
+  preps: {'5,1': 'above', '1,2+3': 'against', '5,2+3': 'against', '1,5': 'below', '2+3,5': 'below', '2+3,1': 'against'}

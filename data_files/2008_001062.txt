@@ -1,0 +1,29 @@
+- id: 3
+  type: 1
+  label: sheep
+  score: -0.697561
+  post_id: 2008_001062.txt
+  bbox: [257.0, 81.0, 111.0, 111.0]
+  attrs: {'brown': 0.030479, 'colorful': 0.013569, 'golden': 0.232954, 'yellow': 0.011478, 'rusty': 0.033538, 'pink': 0.004909, 'striped': 0.023662, 'feathered': 0.068107, 'blue': 0.035459, 'gray': 0.028271, 'wooden': 0.024719, 'furry': 0.009918, 'clear': 0.009681, 'rectangular': 0.005712, 'black': 0.413856, 'dirty': 0.068914, 'orange': 0.021272, 'green': 0.006415, 'white': 0.003806, 'shiny': 0.051418, 'red': 0.063542}
+- id: 4
+  type: 1
+  label: road
+  score: 0.979549
+  post_id: 2008_001062.txt
+  bbox: [1.0, 142.0, 440.0, 188.0]
+  attrs: {'brown': 0.0602, 'colorful': 0.01441, 'golden': 0.196254, 'yellow': 0.093752, 'rusty': 0.092593, 'pink': 0.004507, 'striped': 0.035009, 'feathered': 0.06805, 'blue': 0.025053, 'gray': 0.173176, 'wooden': 0.000803, 'furry': 0.142144, 'clear': 0.041043, 'rectangular': 8.5e-05, 'black': 0.009308, 'dirty': 0.338609, 'orange': 0.010147, 'green': 0.005259, 'white': 0.021401, 'shiny': 0.012192, 'red': 0.021261}
+- id: 1
+  type: 1
+  label: cow
+  score: -0.636354
+  post_id: 2008_001062.txt
+  bbox: [97.0, 97.0, 159.0, 95.0]
+  attrs: {'brown': 0.304111, 'colorful': 0.054238, 'golden': 0.244802, 'yellow': 0.096149, 'rusty': 0.228653, 'pink': 0.005697, 'striped': 0.029921, 'feathered': 0.081117, 'blue': 0.016939, 'gray': 0.036642, 'wooden': 0.035014, 'furry': 0.186028, 'clear': 0.004471, 'rectangular': 0.000141, 'black': 0.005704, 'dirty': 0.104719, 'orange': 0.012838, 'green': 0.010439, 'white': 0.010432, 'shiny': 0.095066, 'red': 0.027154}
+- id: 2
+  type: 1
+  label: cow
+  score: -0.64896
+  post_id: 2008_001062.txt
+  bbox: [248.0, 92.0, 129.0, 77.0]
+  attrs: {'brown': 0.017549, 'colorful': 0.012783, 'golden': 0.228403, 'yellow': 0.00975, 'rusty': 0.014225, 'pink': 0.004998, 'striped': 0.027088, 'feathered': 0.068011, 'blue': 0.039918, 'gray': 0.022334, 'wooden': 0.025957, 'furry': 0.005809, 'clear': 0.007265, 'rectangular': 0.014959, 'black': 0.347771, 'dirty': 0.05706, 'orange': 0.026672, 'green': 0.007223, 'white': 0.005082, 'shiny': 0.015426, 'red': 0.108667}
+  preps: {'4,3': 'below', '4,2': 'below', '4,1': 'below', '3,4': 'above', '1,4': 'against', '1,2': 'by', '3,1': 'by', '3,2': 'against', '1,3': 'by', '2,4': 'above', '2,1': 'by', '2,3': 'against'}

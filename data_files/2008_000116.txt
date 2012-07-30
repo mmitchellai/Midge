@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: road
+  score: 0.949029
+  post_id: 2008_000116.txt
+  bbox: [1.0, 1.0, 251.0, 250.0]
+  attrs: {'brown': 0.026462, 'colorful': 0.02913, 'golden': 0.060425, 'yellow': 0.03491, 'rusty': 0.039653, 'pink': 0.004185, 'striped': 0.048243, 'feathered': 0.065827, 'blue': 0.0078, 'gray': 0.426863, 'wooden': 0.002534, 'furry': 0.176923, 'clear': 0.007068, 'rectangular': 0.021592, 'black': 0.059872, 'dirty': 0.397518, 'orange': 0.014289, 'green': 0.014912, 'white': 0.003721, 'shiny': 0.12729, 'red': 0.055135}
+  preps: {}

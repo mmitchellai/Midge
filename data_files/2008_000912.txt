@@ -1,0 +1,8 @@
+- id: 1
+  type: 1
+  label: sky
+  score: 0.99233
+  post_id: 2008_000912.txt
+  bbox: [1.0, 301.0, 127.0, 120.0]
+  attrs: {'brown': 0.008627, 'colorful': 0.33694, 'golden': 0.037586, 'yellow': 0.089769, 'rusty': 0.156261, 'pink': 0.008726, 'striped': 0.042655, 'feathered': 0.067995, 'blue': 0.134173, 'gray': 0.088017, 'wooden': 0.155497, 'furry': 0.251379, 'clear': 0.056945, 'rectangular': 0.007474, 'black': 0.004246, 'dirty': 0.284197, 'orange': 0.006583, 'green': 0.015581, 'white': 0.018449, 'shiny': 0.020181, 'red': 0.142435}
+  preps: {}

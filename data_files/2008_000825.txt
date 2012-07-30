@@ -1,0 +1,15 @@
+- id: 1+2
+  type: 1
+  label: person
+  score: 2.041568
+  post_id: 2008_000825.txt
+  bbox: (104.0, 35.0, 239.0, 411.0)
+  attrs: {'brown': 0.018526, 'colorful': 0.080945, 'golden': 0.004572, 'yellow': 0.009813, 'rusty': 0.512007, 'pink': 0.020386, 'striped': 0.034585, 'feathered': 0.070589, 'blue': 0.001184, 'gray': 0.052901, 'wooden': 0.058034, 'furry': 0.002317, 'clear': 0.06925, 'rectangular': 0.00254, 'black': 0.034959, 'dirty': 0.024119, 'orange': 0.015742, 'green': 0.005056, 'white': 0.014441, 'shiny': 0.014388, 'red': 0.091586}
+- id: 3
+  type: 1
+  label: tree
+  score: 0.951965
+  post_id: 2008_000825.txt
+  bbox: [1.0, 190.0, 86.0, 251.0]
+  attrs: {'brown': 0.294728, 'colorful': 0.011325, 'golden': 0.157835, 'yellow': 0.045158, 'rusty': 0.429225, 'pink': 0.024422, 'striped': 0.017124, 'feathered': 0.068065, 'blue': 0.01905, 'gray': 0.060424, 'wooden': 0.001873, 'furry': 0.255236, 'clear': 0.003188, 'rectangular': '7e-06', 'black': 0.037381, 'dirty': 0.094272, 'orange': 0.006233, 'green': 0.011355, 'white': 0.011266, 'shiny': 0.013421, 'red': 0.027369}
+  preps: {'1+2,3': 'by', '3,1+2': 'by'}
