@@ -51,6 +51,8 @@ This program currently generates sentences for the objects listed in KB/reserved
 --verb-forms=path/to/vision_verbs       Reads in mapping of vision detection verbs to their lexical forms.
 --not-pickled           Do not read in saved pickle files.
 
+### Note on Downloading ###
+The "KB" directory is quite large.  Unless you're adding new object detections, you will not need any of the nyt_stats or flickr_stats subdirectories, as the relevant information has already been stored in the pickled files.
 
 ### Yaml file format ###
 Computer vision output needs to be formatted in the way listed below.  Note that the only things REQUIRED are the id, label, score, and postid; everything else is optional.
