@@ -1,12 +1,24 @@
-#### This is licensed under the Creative Commons        ####
-#### Attribution-NonCommercial-ShareAlike 3.0 Unported  ####
-#### (CC BY-NC-SA 3.0) license.                         ####
-#### http://creativecommons.org/licenses/by-nc-sa/3.0/  ####
-#### Please cite the relevant work:                     ####
-#### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012. ####
-#### Questions/comments, send to m.mitchell@abdn.ac.uk  ####
-
-
+### Copyright 2011, 2012 Margaret Mitchell
+### Distributed under the terms of the GNU General Public License
+### This file is part of the vision-to-language system Midge.
+### 
+### Midge is free software: you can redistribute it and/or modify
+### it under the terms of the GNU General Public License as published by
+### the Free Software Foundation, either version 3 of the License, or
+### (at your option) any later version.
+### 
+### Midge is distributed in the hope that it will be useful,
+### but WITHOUT ANY WARRANTY; without even the implied warranty of
+### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+### GNU General Public License for more details.
+### 
+### You should have received a copy of the GNU General Public License
+### along with Midge.  If not, see <http://www.gnu.org/licenses/>.
+### 
+### Please cite the relevant work:                    
+### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012.
+###
+### Questions/Comments, send to m.mitchell@abdn.ac.uk
 
 import sys
 import re
@@ -19,6 +31,7 @@ import pickle
 class queryKB():
     def __init__(self, reserved_words=[], word_thresh=.001, cnt=10, read_pickle=True, read_db=False, db=None):
         self.read_pickle = read_pickle
+        #print "read_pickle is", read_pickle
         self.word_thresh = float(word_thresh)
         self.cnt = cnt
         # Only generate contentful verbs for now.
@@ -107,61 +120,100 @@ class queryKB():
 
     def read_raw_data(self):
         #dir = "/data/share/corpora_stats/"
-        dir = "corpora_stats/"
-        self.visual_thresh_file = open("data/thresholds", "r").readlines()
-        self.mod_ngram_file = open("data/NYT+WSJ.auto.mod.noOOV", "r").readlines()
-        self.wn_hyps = open(dir + "flickr.wn_hyps")
-        self.prep_file = open("data/preps", "r").readlines()
+        dir = "KB/"
+        a = open(dir + "thresholds", "r")
+        self.visual_thresh_file = a.readlines()
+        a.close()
+        b = open(dir + "NYT+WSJ.auto.mod.noOOV", "r")
+        self.mod_ngram_file = b.readlines()
+        b.close()
+        c = open(dir + "flickr.wn_hyps")
+        self.wn_hyps = c.readlines()
+        c.close()
+        d = open(dir + "preps", "r")
+        self.prep_file = d.readlines()
+        d.close()
         # Swap in NYT data here...closed-class word, so you can use a larger corpus.
         #self.det_file = \
         #open(dir + "flickr_stats/flickr.det_heads", "r").readlines()
-        self.det_file = \
-        open(dir + "nyt_stats/nyt.det_heads", "r").readlines()
-        self.mod_file = \
-        open(dir + "flickr_stats/flickr.mod_nouns", "r").readlines()
-        self.att_files = \
-        open(dir + "att_groups", "r").readlines()
-        self.verb_noun_file = \
-        open(dir + "flickr_stats/flickr.verb_nouns", "r").readlines()
-        self.noun_verb_file = \
-        open(dir + "flickr_stats/flickr.noun_verbs", "r").readlines()
+        e = open(dir + "nyt_stats/nyt.det_heads", "r")
+        self.det_file = e.readlines()
+        e.close()
+        f = open(dir + "flickr_stats/flickr.mod_nouns", "r")
+        self.mod_file = f.readlines()
+        f.close()
+        g = open(dir + "att_groups", "r")
+        self.att_files = g.readlines()
+        g.close()
+        h = open(dir + "flickr_stats/flickr.verb_nouns", "r")
+        self.verb_noun_file = h.readlines()
+        h.close()
+        i = open(dir + "flickr_stats/flickr.noun_verbs", "r")
+        self.noun_verb_file = i.readlines()
+        i.close()
         # Swap in NYT data here?
-        self.verb_prep_file = \
-        open(dir + "flickr_stats/flickr.verb_preps", "r").readlines()
+        j = open(dir + "flickr_stats/flickr.verb_preps", "r")
+        self.verb_prep_file = j.readlines()
+        j.close()
         #self.verb_prep_file = \
         #open(dir + "corpora_stats/redo/nyt.verb_preps", "r").readlines()
         # Swap in a NYT data here
-        self.prep_noun_file = \
-        open(dir + "flickr_stats/flickr.prep_nouns", "r").readlines()
+        k = open(dir + "flickr_stats/flickr.prep_nouns", "r")
+        self.prep_noun_file = k.readlines()
+        k.close()
         #self.prep_noun_file = \
         #open(dir + "corpora_stats/redo/nyt.prep_nouns", "r").readlines()
-        self.noun_prep_file = \
-        open(dir + "flickr_stats/flickr.noun_preps", "r").readlines()
+        l = open(dir + "flickr_stats/flickr.noun_preps", "r")
+        self.noun_prep_file = l.readlines()
+        l.close()
         #self.noun_prep_file = \
         #open(dir + "corpora_stats/redo/nyt.noun_preps", "r").readlines()
-        self.verb_trans_file = \
-        open(dir + "flickr_stats/flickr.verb_transitivity", "r").readlines()
-        self.nouns_file = \
-        open(dir + "flickr_stats/flickr.noun_cooccurrences", "r").readlines()
-        self.plurals_file = \
-        open(dir + "plurals", "r").readlines()
-        self.ins_file = open(dir + "in_list", "r").readlines()
+        m = open(dir + "flickr_stats/flickr.verb_transitivity", "r")
+        self.verb_trans_file = m.readlines()
+        m.close()
+        n = open(dir + "flickr_stats/flickr.noun_cooccurrences", "r")
+        self.nouns_file = n.readlines()
+        n.close()
+        o = open(dir + "plurals", "r")
+        self.plurals_file = o.readlines()
+        o.close()
+        p = open(dir + "in_list", "r")
+        self.ins_file = p.readlines()
+        p.close()
+        print "Creating models..."
+        print "1"
         self.get_vis_thresh()
+        print "2"
         self.read_mod_ngram()
+        #self.mod_ngram_hash = pickle.load(open("pickled_files/mod_ngram_hash.pk", "rb"))
+        print "3"
         self.read_plurals()
+        print "4"
         self.read_det()
+        print "5"
         self.read_mod()
+        print "6"
         self.read_att()
+        print "7"
         self.read_preps()
+        print "8"
         self.read_noun_freq()
+        print "9"
         self.read_verb_noun()
+        print "10"
         self.read_noun_verb()
+        print "11"
         self.read_verb_prep()
+        print "12"
         self.read_prep_noun()
+        print "13"
         self.read_noun_prep()
+        print "14"
         self.read_verb_trans()
         #self.read_noun_noun()
+        print "15"
         self.read_in_wn()
+        print "16"
         self.read_ins()
 
     def get_as_db(self):
@@ -206,8 +258,9 @@ class queryKB():
             else:
                 words = split_line[1].split()
                 score = split_line[0]
+                # Speeds up everything by only grabbing ngram evidence for detections we're looking at.
                 for word in words:
-                    if self.reserved_words != [] and word not in self.reserved_words:
+                    if self.reserved_words != [] and (word not in self.reserved_words) and (word not in ["<s>", "</s>"]):
                         inc = False
                         break
                     inc = True
@@ -341,20 +394,15 @@ class queryKB():
             first_rel = split_line[0]
             first_rel = first_rel.strip()
             split_rel = first_rel.split(" ")
-            a = 'a'
             main_prep = split_rel[1]
-            b = 'b'
-            self.preps[(a, main_prep, b)] = {('a', 'b') : [], ('b', 'a'):[]}
+            self.preps[('a', main_prep, 'b')] = {('a', 'b') : [], ('b', 'a'):[]}
             for rel in split_line[1:]:
                 rel = rel.strip()
                 split_rel = rel.split(" ")
                 x = split_rel[0]
                 prep = split_rel[1]
                 y = split_rel[2]
-                if x == 'a' and y == 'b':
-                    self.preps[(a, main_prep, b)][('a', 'b')] += [prep]
-                elif x == 'b' and y == 'a':
-                    self.preps[(a, main_prep, b)][('b', 'a')] += [prep]
+                self.preps[('a', main_prep, 'b')][(x, y)] += [prep]
         if not self.read_pickle:
             pickle.dump(self.preps, open("pickled_files/preps.pk", "wb"))
 
@@ -664,44 +712,35 @@ class queryKB():
         iter_permuts = itertools.permutations(mods)
         permuts = []
         found_order = ()
-        max_mod_prob = -99999999
+        max_score = -99999999
         for perm in iter_permuts:
             perm_list = list(perm)
-            order_mods = tuple(["<s>"] + perm_list + [obj, "</s>"])
+            order_mods = ["<s>"] + perm_list + [obj, "</s>"]
             permuts += [perm_list]
             num = len(order_mods)
-            try: 
-                score = float(self.mod_ngram_hash[num][order_mods])
-                found = True
-            except KeyError:
-                found = False
-                continue
-            if score > max_mod_prob:
-                max_mod_prob = score
-                found_order = perm
-        while found_order == ():
-           # Incrementally backoff to smaller ngrams
-            num -= 1
-            if num < 0:
-                break   
-            for perm in permuts:
-                i = 0
-                backoff_mod_prob = 0.0
-                order_mods = tuple(["<s>"] + perm + [obj, "</s>"])
-                while i < len(order_mods) - num + 1: 
-                    backoff_mod_order = order_mods[i:i+num]
-                    try:
-                        backoff_mod_prob += self.mod_ngram_hash[num][backoff_mod_order]
-                        found = True
-                    except KeyError:
-                        found = False
-                        i = len(order_mods)
-                        break
-                    i += 1
-                if found:
-                    if backoff_mod_prob > max_mod_prob:
-                        max_mod_prob = backoff_mod_prob
-                        found_order = perm
+            max = num
+            min = 0
+            score = 0.0
+            ordered = []
+            last_max = 0
+            while ordered != order_mods:
+                t_order_mods = tuple(order_mods[min:max])
+                # If we've hit the unigram horizon, continue (Pruning hack)
+                if max == last_max:
+                    break
+                if t_order_mods in self.mod_ngram_hash[len(t_order_mods)]:
+                    ordered = order_mods[:max]
+                    last_max = max
+                    score += self.mod_ngram_hash[len(t_order_mods)][t_order_mods]
+                    if ordered[-1] == "</s>":
+                        if score > max_score:
+                            max_score = score
+                            found_order = perm_list
+                    else:
+                        min += 1
+                        max = num
+                else:
+                    max -= 1
         return found_order
 
     def get_att(self, mod):

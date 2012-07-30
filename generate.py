@@ -1,11 +1,24 @@
-#### This is licensed under the Creative Commons        ####
-#### Attribution-NonCommercial-ShareAlike 3.0 Unported  ####
-#### (CC BY-NC-SA 3.0) license.                         ####
-#### http://creativecommons.org/licenses/by-nc-sa/3.0/  ####
-#### Please cite the relevant work:                     ####
-#### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012. ####
-#### Questions/comments, send to m.mitchell@abdn.ac.uk  ####
-
+### Copyright 2011, 2012 Margaret Mitchell
+### Distributed under the terms of the GNU General Public License
+### This file is part of the vision-to-language system Midge.
+### 
+### Midge is free software: you can redistribute it and/or modify
+### it under the terms of the GNU General Public License as published by
+### the Free Software Foundation, either version 3 of the License, or
+### (at your option) any later version.
+### 
+### Midge is distributed in the hope that it will be useful,
+### but WITHOUT ANY WARRANTY; without even the implied warranty of
+### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+### GNU General Public License for more details.
+### 
+### You should have received a copy of the GNU General Public License
+### along with Midge.  If not, see <http://www.gnu.org/licenses/>.
+### 
+### Please cite the relevant work:                    
+### Mitchell et al. (2012).  "Midge: Generating Image Descriptions From Computer Vision Detections." Proceedings of EACL 2012.
+###
+### Questions/Comments, send to m.mitchell@abdn.ac.uk
 
 import sys
 import re
@@ -17,7 +30,7 @@ from queryKB import queryKB
 from math import log
 
 class Sofie():
-    def __init__(self, KB_obj, data={}, word_thresh=.01, count_cutoff=2, vision_thresh=.3, spec_post=False, halluc_set=[], with_preps=True, pickled=True):
+    def __init__(self, KB_obj, data={}, word_thresh=.01, count_cutoff=2, vision_thresh=.3, spec_post=False, halluc_set=[], with_preps=True, choose_PPs=False, pickled=True):
         """ Input:  Word_thresh:  Likelihood cutoff for beam of (tag, word) pairs selected by noun anchor 
                     Count_cutoff:  Raw count cutoff for collected co-occurrences
                     Vision_thresh:  Blanket threshold at which to ignore vision detections 
@@ -47,6 +60,7 @@ class Sofie():
         self.pickled = pickled
         self.spec_post = spec_post
         self.with_preps = with_preps
+        self.choose_PPs = choose_PPs
         ## STEP 1.
         self.get_detections()
 
@@ -145,12 +159,15 @@ class Sofie():
         mod_len = len(mods)
         mod_orders = {}
         ### STEP 10:  Order selected modifiers.
-        # 1 or more modifiers; orders them using Mitchell et al. 2011 N-gram model.
+        # 2 or more modifiers; orders them using Mitchell et al. 2011 N-gram model.
         while mod_len > 0:
             mod_combinations = itertools.combinations(mods, mod_len)
             mod_len -= 1
             for mod_combination in mod_combinations:
-                ordered_mods = self.KB_obj.order_mods(mod_combination, obj)
+                if mod_len == 0:
+                    ordered_mods = mod_combination
+                else:
+                    ordered_mods = self.KB_obj.order_mods(mod_combination, obj)
                 new_ordered_mods = []
                 for mod in ordered_mods:
                     mod_node = (mod_tag, mod)
@@ -249,7 +266,6 @@ class Sofie():
                     cur_str += " (" + rel_tuple
                 else:
                     cur_str = " (NP" + cur_str + " (" + rel_tuple
-                last_rel_tuple = None
                 continue
             # Coordination constraint -- triggers mother NP with 
             # NP daughters.
@@ -274,6 +290,10 @@ class Sofie():
         if NP3 == "":
             pass
         else:
+            # Avoid repetition.  We approximate the likelihood of "and" here as the 
+            # probability of the corresponding spatial relation preposition.
+            if RELS2[0] == RELS[0] and RELS2[1][1] == RELS[1][1]:
+                RELS2 = ('CONJP', ('CC', 'and', RELS2[1][-1]))
             final_str = self.__nonterm_surface_rels__(RELS2, final_str)
             final_str += self.__nonterm_surface__("NP", NP3)
             final_str += (")" * (final_str.count("(") - final_str.count(")")))
@@ -316,7 +336,7 @@ class Sofie():
                 type_n = a['type']
             except KeyError:
                 type_n = '1'
-            id_n = a['id']
+            id_n = str(a['id'])
             post_id = a['post_id']
             # Generating for just a single image.
             if self.spec_post and post_id != self.spec_post:
@@ -330,8 +350,8 @@ class Sofie():
                     self.prep_detections[post_id] = {}
                 for id_set in a['preps']:
                     ids = id_set.split(",")
-                    id1 = int(ids[0].strip("'"))
-                    id2 = int(ids[1].strip("'"))
+                    id1 = ids[0].strip("'")
+                    id2 = ids[1].strip("'")
                     try:
                         self.prep_detections[post_id][(id1, id2)] = a['preps'][id_set]
                     except KeyError:
@@ -451,6 +471,17 @@ class Sofie():
             det_hash[noadj_det_list[0][1]] = noadj_det_list[0][2]
         return det_hash
 
+    def maximize_prob(self, preps_with_scores):
+        """ Selects the most likely preposition """
+        score_prep_list = []
+        for prep in preps_with_scores:
+            score = preps_with_scores[prep]
+            score_prep_list += [(score, prep)]
+        score_prep_list.sort()
+        score_prep_list.reverse()
+        (score, prep) = score_prep_list[0]
+        return {prep:score}
+
     def run(self):
         if self.prep_detections == {}:
             sys.stderr.write("Have not read in spatial relations from bounding boxes; generating prepositions from language model alone.\n")
@@ -458,6 +489,8 @@ class Sofie():
         final_sentence_hash = {}
         # For each image..
         for post_id in self.detections:
+            if self.DEBUG:
+                print "Post id:", post_id
             final_sentence_hash[post_id] = {}
             # Get the detected objects.
             objs = self.label_id_hash[post_id].values()
@@ -590,6 +623,9 @@ class Sofie():
                         # with a preposition, so we use a conjunction.
                         if PPs[(i, j)] == {}:
                             CONJPs[(i, j)] = {("CC", "and"): 1.0}
+                        # Used with longest-string criterion:  The generator decides.
+                        #elif self.choose_PPs:
+                        #PPs[(i, j)] = self.maximize_prob(PPs[(i, j)])
                         if y == 3 or (y - last_y) == 3:
                             sentences[n] = (id_list[x-1:y])
                             x = y
@@ -704,9 +740,10 @@ if __name__ == "__main__":
     spec_post = False
     halluc_set = []
     with_preps = True
+    choose_PPs = False
     pickled = True
     data = None
-    objects = None
+    objects = []
     for arg in sys.argv[1:]:
         split_arg = arg.split("=")
         if split_arg[0] == "--data-file":
@@ -730,6 +767,8 @@ if __name__ == "__main__":
                 with_preps = True
             elif split_arg[1] == "False":
                 with_preps = False
+        elif split_arg[0] == "--choose-preps":
+                choose_PPs = True
         elif split_arg[0] == "--not-pickled":
             pickled = False
         elif split_arg[0] == "--vision-thresh":
@@ -743,16 +782,21 @@ if __name__ == "__main__":
         if not pickled:
             sys.stderr.write("Warning -- no input data.  Reading pickled data instead...\n")
         data = pickle.load(open("pickled_files/data.pk", "rb"))
-    if objects == None:
+    if objects == [] and pickled:
         objects = pickle.load(open("pickled_files/objects.pk", "rb"))
     if not pickled:
+        if objects == []:
+            sys.stderr.write("!! Warning -- have not limited search space to the vision detections being considered.\n")
+            sys.stderr.write("!! Run time will be EXTREMELY SLOW.\n")
+            sys.stderr.write("!! To narrow search space, include --vision-objects=/path/to/vision/file in sys args.\n")
         KB_obj = queryKB(objects, word_thresh, count_cutoff, False)
     else:
         KB_obj = queryKB(objects, word_thresh, count_cutoff)
-    sofie_obj = Sofie(KB_obj, data, word_thresh, count_cutoff, vision_thresh, spec_post, halluc_set, with_preps, pickled)
+    sofie_obj = Sofie(KB_obj, data, word_thresh, count_cutoff, vision_thresh, spec_post, halluc_set, with_preps, choose_PPs, pickled)
     final_sentence_hash = sofie_obj.run()
-    for post_id in sorted(final_sentence_hash):
-        print "***", post_id
-        for s_num in final_sentence_hash[post_id]:
-            for sentence in final_sentence_hash[post_id][s_num]:
-                print sentence
+    if sofie_obj.DEBUG:
+        for post_id in sorted(final_sentence_hash):
+            print "***", post_id
+            for s_num in final_sentence_hash[post_id]:
+                for sentence in final_sentence_hash[post_id][s_num]:
+                    print sentence
