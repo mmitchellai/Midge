@@ -1,5 +1,6 @@
 ### Copyright 2011, 2012 Margaret Mitchell
 ### Distributed under the terms of the GNU General Public License
+###
 ### This file is part of the vision-to-language system Midge.
 ### 
 ### Midge is free software: you can redistribute it and/or modify
@@ -29,7 +30,7 @@ from copy import copy
 from queryKB import queryKB
 from math import log
 
-class Sofie():
+class Midge():
     def __init__(self, KB_obj, data={}, word_thresh=.01, count_cutoff=2, vision_thresh=.3, spec_post=False, halluc_set=[], with_preps=True, choose_PPs=False, pickled=True):
         """ Input:  Word_thresh:  Likelihood cutoff for beam of (tag, word) pairs selected by noun anchor 
                     Count_cutoff:  Raw count cutoff for collected co-occurrences
@@ -604,10 +605,10 @@ class Sofie():
                         if self.with_preps:
                             try:
                                 g_prep = given_preps[(i, j)]
-                                c_preps = self.KB_obj.get_preps(obj_i, g_prep, obj_j, 'ab')
+                                c_preps = self.KB_obj.get_preps(g_prep, 'ab')
                             except KeyError:
                                 g_prep = given_preps[(j, i)]
-                                c_preps = self.KB_obj.get_preps(obj_j, g_prep, obj_i, 'ba')
+                                c_preps = self.KB_obj.get_preps(g_prep, 'ba')
                         ### STEP 8:  Likely verbs requested, generate VP structures for them.
                         # Generates VP --> V NP and VP --> V PP structures
                         if "verb" in self.halluc_set:
@@ -792,10 +793,10 @@ if __name__ == "__main__":
         KB_obj = queryKB(objects, word_thresh, count_cutoff, False)
     else:
         KB_obj = queryKB(objects, word_thresh, count_cutoff)
-    sofie_obj = Sofie(KB_obj, data, word_thresh, count_cutoff, vision_thresh, spec_post, halluc_set, with_preps, choose_PPs, pickled)
-    final_sentence_hash = sofie_obj.run()
-    if sofie_obj.DEBUG:
-        for post_id in sorted(final_sentence_hash):
+    midge_obj = Midge(KB_obj, data, word_thresh, count_cutoff, vision_thresh, spec_post, halluc_set, with_preps, choose_PPs, pickled)
+    final_sentence_hash = midge_obj.run()
+    #if midge_obj.DEBUG:
+    for post_id in sorted(final_sentence_hash):
             print "***", post_id
             for s_num in final_sentence_hash[post_id]:
                 for sentence in final_sentence_hash[post_id][s_num]:
