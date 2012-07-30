@@ -1,0 +1,7 @@
+flickr.det_heads    determiner/noun probabilities
+flickr.mod_nouns    modifier/noun probabilities
+flickr.noun_cooccurrences   noun/noun probabilities
+flickr.noun_verbs   noun/verb probabilities
+flickr.prep_nouns   prep/noun probabilities
+flickr.verb_nouns   verb/noun probabilities
+flickr.verb_preps   verb/prep probabilities
