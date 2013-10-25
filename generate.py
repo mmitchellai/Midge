@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 ### Copyright 2011, 2012 Margaret Mitchell
 ### Distributed under the terms of the GNU General Public License
 ###
